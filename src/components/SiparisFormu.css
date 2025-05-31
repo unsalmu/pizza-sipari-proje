@@ -1,0 +1,289 @@
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    background: #fafbfc;
+    min-height: 100vh;    /* yatayda tam ortala */
+  }
+.siparis-formu {
+    width: 540px;
+    background: #fff;
+    padding: 32px 32px 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    overflow-y: auto;
+    margin-top: 24px;
+  }
+
+  .siparis-formu-ust {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .siparis-formu-ust h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.25rem;
+  }
+
+  .siparis-formu-ust .d-flex {
+    display: flex;
+    align-items: baseline;   /* ₺ işareti ile 4.9’un taban çizgisi hizası */
+    gap: 1rem;
+    justify-content: space-between;     
+  }
+
+  .siparis-formu-ust .display-4 {
+    font-size: 2.25rem;
+    color: #222;
+    font-weight: 700;
+  }
+  
+  .rating {
+    font-size: 1rem;
+    color: #8b9097;
+    display: flex;
+    align-items: center;
+    gap: 32px;             /* 8px kadar boşluk */
+  }
+
+  .siparis-formu-ust p {
+    font-size: 1rem;          /* 16px */
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: justify;
+    text-align-last: left;
+  }
+  
+  .siparis-radio-select {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 32px;
+    align-items: flex-start; /* Flex öğelerini dikey olarak hizala */
+  }
+
+  .boyut-secim {
+    padding-left: 0;
+    gap: 1rem;
+  }
+
+  .boyut-secim .form-check {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .boyut-secim legend,
+.hamur-secim-group .secim-label {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #222;
+  display: inline;
+  margin-bottom: 0.75rem;
+}
+.boyut-secim legend {
+    margin-left: 8px;
+    font-size: 1.3rem;
+    color: #243142;
+  }
+  
+.hamur-secim-group label.secim-label {
+    margin-bottom: 0.7rem;
+    display: flex; 
+  }
+
+  .text-danger {
+    color: #b71c1c;
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-left: 2px;
+  }
+
+  .hamur-secim-group select {
+    width: 150px;
+}
+
+.ekstra-malzeme {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+.ekstra-malzeme .h5 {
+    font-size: 1.28rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #212121;
+  }
+
+.ekstra-malzeme p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 18px;
+  }
+
+  .malzeme-listesi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolon */
+    gap: 14px 32px;     /* satır ve sütun arası boşluk */
+    margin-bottom: 8px;
+  }
+  .malzeme-listesi .form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem; /* checkbox ve label arası boşluk */
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .malzeme-listesi label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #223043;
+    cursor: pointer;
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+  .malzeme-listesi input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #2563eb; /* Modern browserlarda mavi tik */
+  }
+  .ekstra-malzeme .form-feedback, 
+.ekstra-malzeme .invalid-feedback, 
+.ekstra-malzeme .d-block {
+  color: #d32f2f;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.siparis-notu {
+    margin-bottom: 32px;
+  }
+
+  .siparis-notu label {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .siparis-notu input[type="text"] {
+    width: 100%;
+    padding: 12px 5px;
+    font-size: 1rem;
+    color: #444;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fafbfc;
+  }
+  .siparis-notu,
+.siparis-notu label,
+.siparis-notu input[type="text"] {
+  text-align: left !important;
+}
+.d-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;   /* iki blok arası boşluk */
+  }
+  .quantity-group {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 0;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+  .quantity-group .btn {
+    background: #ffd600;
+    color: #222;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    min-width: 44px;
+    font-size: 0.8rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .quantity-group input[type="number"] {
+    width: 44px;
+    height: 44px;         /* 44px olsun! */
+    text-align: center;
+    border: none;
+    border-left: 1.2px solid #f1f1f1;
+    border-right: 1.2px solid #f1f1f1;
+    font-size: 1rem;
+    background: #fff;
+    font-weight: 700;
+    text-indent: 12px;
+ 
+  }
+  .tutar-ozet {
+    min-width: 250px;
+    max-width: 380px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.07);
+    border: 1.5px solid #ececec;
+    padding: 30px 0 0 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+  .tutar-ozet .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+    padding: 0 30px 0 30px;
+  }
+
+  .tutar-ozet .secimler,
+.tutar-ozet .toplam {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: #444;
+  padding: 0px 30px;
+}
+.tutar-ozet .toplam strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d32f2f;
+  }
+  .tutar-ozet .toplam strong:first-child {
+    color: #d32f2f;
+  }
+  .tutar-ozet .btn {
+    width: 100%;
+    background: #ffd600;
+    color: #222;
+    font-weight: 700;
+    font-size: 1.18rem;
+    border-radius: 0 0 14px 14px;
+    border: none;
+    padding: 18px 0;
+    margin-top: 28px;
+    letter-spacing: 1px;
+  }
+  .tutar-ozet .btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  .tutar-ozet .btn:hover:not(:disabled) {
+    background: #ffe066;
+  }

@@ -1,0 +1,33 @@
+.header {
+    background-color: #CE2829;
+    padding: 60px 0 30px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .site-logo {
+    height: 40px;    /* logonun istediğin yüksekliğe göre ayarla */
+    width: auto;
+    
+  }
+  
+  .site-breadcrumb {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.9);
+    margin-top: 1rem;
+    width: 100%;
+    padding-left: 680px;
+    display: flex;
+    align-items: center;  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+  }
+  
+  .breadcrumb-item.active {
+    font-weight: bold;
+    color: #fff;
+  }
+  
