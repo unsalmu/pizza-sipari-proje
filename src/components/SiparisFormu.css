@@ -229,18 +229,17 @@
  
   }
   .tutar-ozet {
-    min-width: 250px;
-    max-width: 380px;
+
     width: 100%;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 18px 0 rgba(0,0,0,0.07);
     border: 1.5px solid #ececec;
-    padding: 30px 0 0 0;
     margin-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 360px;
     
   }
   .tutar-ozet .card-title {

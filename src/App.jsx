@@ -4,15 +4,22 @@ import workintech from '/workintech.svg';
 import './App.css';
 import SiparisFormu from './components/SiparisFormu';
 import MainPage from './components/MainPage';
+import Success from './components/Success';
 
 function App() {
-  const [formActive, setFormActive] = useState(false);
+  const [view, setView] = useState('main');
 
   return (
     <div>
-      {formActive 
-      ? <SiparisFormu onBack={() => setFormActive(false)} />
-      : <MainPage onOrder={() => setFormActive(true)} />}
+      {view === 'main' && 
+      (<MainPage onOrder={() => setView('form')} />
+      )}
+      {view === 'form' && (
+        <SiparisFormu onBack={() => setView('main')}
+          onSuccess={() => setView('success')}
+        />
+      )}
+      {view === 'success' && <Success />}
     </div>
   );
 }

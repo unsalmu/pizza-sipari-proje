@@ -5,7 +5,7 @@ import Header from './Header';
 import './SiparisFormu.css';
 
 
-export default function SiparisFormu({onBack}) {
+export default function SiparisFormu({onBack, onSuccess}) {
 
     const malzemeListesi = [ "Pepperoni", "Tavuk Izgara", "Mısır", "Sarımsak", "Ananas", "Sosis", "Soğan", "Sucuk", "Biber", "Kabak", " Kanada Jambonu", "Domates", "Jalepeno" ];
     
@@ -77,6 +77,7 @@ export default function SiparisFormu({onBack}) {
                 setSeciliMalzemeler([]);
                 setQuantity(1);
                 setSiparisNotu('');
+                onSuccess();
             }  
             catch (error) {
                 console.error('Sipariş gönderilirken hata oluştu:', error);

@@ -1,0 +1,28 @@
+.success {
+  min-height: 100vh;
+  width: 100vw;
+  background: #CE2829; /* Koyu kırmızı */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.success-content h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+.success > .header {
+  margin-top: 2rem;
+}
