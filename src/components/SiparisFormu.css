@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 40px 0;
     background: #fafbfc;
     min-height: 100vh;
   }
@@ -15,7 +14,6 @@
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.09);
     overflow-y: auto;
-    margin-top: 24px;
   }
 
   .siparis-formu-ust {
