@@ -89,7 +89,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
         <>
         <Header onBack={onBack}/>
         <div className="page-wrapper">
-            <Form className="siparis-formu" onSubmit={handleSubmit}>
+            <Form className="siparis-formu" onSubmit={handleSubmit} data-cy="siparis-formu">
                 <div className="siparis-formu-ust mb-4">
                     <h1>Position Absolute Acı Pizza</h1>
                     <div className="reviews">
@@ -114,6 +114,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                     type="radio"
                                     onChange={handleBoyutChange}
                                     checked={boyut === 'kucuk'}
+                                    data-cy="boyut-radio-kucuk"
                                     />
                                         {' '}
                                 <Label check for="kucuk-boyut"> Küçük
@@ -127,6 +128,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                     type="radio"
                                     onChange={handleBoyutChange}
                                     checked={boyut === 'orta'}
+                                    data-cy="boyut-radio-orta"
                                 />
                                         {' '}
                                 <Label check for="orta-boyut">
@@ -141,6 +143,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                     type="radio"
                                     onChange={handleBoyutChange}
                                     checked={boyut === 'buyuk'}
+                                    data-cy="boyut-radio-buyuk"
                                 />
                                         {' '}
                                 <Label check>
@@ -157,6 +160,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                         value={hamur}
                         onChange={handleHamurChange} 
                         id="hamur-select"
+                        data-cy="hamur-select"
                         >
                         <option value="" disabled hidden>Hamur Kalınlığı</option>
                         <option>Kalın Hamur</option>
@@ -176,6 +180,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                     value={malzeme}
                                     checked={seciliMalzemeler.includes(malzeme)}
                                     onChange={handleEkCHange}
+                                    data-cy={`malzeme-checkbox-${index}`}
                                     />
                                 {' '}
                                 <Label check>
@@ -203,6 +208,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                     type="text"
                     onChange={handleSiparisNotuChange}
                     placeholder="Siparişinize eklemek istediğn bir not var mı?"
+                    data-cy="siparis-notu"
                     />
                 </FormGroup> 
                 <hr />
@@ -238,7 +244,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                         !hamur ||
                                         seciliMalzemeler.length < 4 ||
                                         seciliMalzemeler.length > 10
-                                    } className="siparis-ver-btn desktop-only">
+                                    } className="siparis-ver-btn desktop-only" data-cy="siparis-ver-btn">
                                     Siparişi Ver
                         </Button>
                         {/* Sadece mobilde görünen alt satır */}
@@ -259,7 +265,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
                                         !hamur ||
                                         seciliMalzemeler.length < 4 ||
                                         seciliMalzemeler.length > 10
-                                    } className="siparis-ver-btn">
+                                    } className="siparis-ver-btn" data-cy="siparis-ver-btn">
                                     Siparişi Ver
                             </Button>
                         </div>   

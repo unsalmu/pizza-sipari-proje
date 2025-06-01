@@ -11,7 +11,7 @@ export default function MainPage({ onOrder }) {
           <div className="hero-content">
             <h1 className="special-font">fırsatı kaçırma</h1>
             <h2 className="hero-title">Kod Acıktırır<br />Pizza, Doyurur</h2>
-            <button className="cta" onClick={onOrder}>ACIKTIM</button>
+            <button className="cta" onClick={onOrder} data-cy="to-siparis-formu">ACIKTIM</button>
           </div>
         </header>
         <main>
@@ -37,20 +37,20 @@ export default function MainPage({ onOrder }) {
             <article className="card-special">
               <h2>Özel Lezzetus</h2>
               <p>Position: Absolute Acı Burger</p>
-              <button className="sipariş-ver" onClick={onOrder}>Sipariş Ver</button>
+              <button className="sipariş-ver" onClick={onOrder} data-cy="to-siparis-formu">Sipariş Ver</button>
             </article>
           </div>
           <div className="featured-right">
             <article className="card-small-ust">
               <div className="card-small-ust-content">
                 <h3>Hackatlon <br /> Burger Menü</h3>
-                <button className="sipariş-ver" onClick={onOrder}>Sipariş Ver</button>
+                <button className="sipariş-ver" onClick={onOrder} data-cy="to-siparis-formu">Sipariş Ver</button>
               </div>
             </article>
             <article className="card-small-alt">
               <div className="card-small-alt-content">
                 <h3><span className="highlight">Çoooook</span> hızlı <br /> npm gibi kurye</h3>
-                <button className="btn" type="button" onClick={onOrder}>Sipariş Ver</button>
+                <button className="btn" type="button" onClick={onOrder} data-cy="to-siparis-formu">Sipariş Ver</button>
               </div>
             </article>
           </div>
