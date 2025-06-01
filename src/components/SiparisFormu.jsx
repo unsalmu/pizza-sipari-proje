@@ -92,7 +92,7 @@ export default function SiparisFormu({onBack, onSuccess}) {
             <Form className="siparis-formu" onSubmit={handleSubmit}>
                 <div className="siparis-formu-ust mb-4">
                     <h1>Position Absolute Acı Pizza</h1>
-                    <div className="d-flex align-items-baseline justify-content-between">
+                    <div className="reviews">
                         <span className="display-4">85.50₺</span>
                         <small className="text-muted rating">
                             <span>4.9</span>
@@ -208,38 +208,62 @@ export default function SiparisFormu({onBack, onSuccess}) {
                 <hr />
 
                 <div className="d-flex">
-                <InputGroup className='quantity-group'>
-                    <Button onClick={decreaseQuantity}>–</Button>
-                    <Input
-                    type="number"
-                    value={quantity}
-                    readOnly
-                    style={{ textAlign: 'center' }}
-                    />
-                    <Button onClick={increaseQuantity}>+</Button>
-                </InputGroup>
-                    <Card className='tutar-ozet'>
-                        <CardBody>
-                            <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
-                                <div className='secimler'>
-                                    <span>Seçimler</span>
-                                    <span>{ekstraTutar.toFixed(2)}₺</span>  
-                                </div>
-                                <div className='toplam'>
-                                    <strong>Toplam</strong>
-                                    <strong>{toplamTutar.toFixed(2)}₺</strong>
-                                </div>   
-                                <Button color="warning" type="submit" block
+                    <InputGroup className='quantity-group desktop-only'>
+                        <Button onClick={decreaseQuantity}>–</Button>
+                        <Input
+                        type="number"
+                        value={quantity}
+                        readOnly
+                        style={{ textAlign: 'center' }}
+                        />
+                        <Button onClick={increaseQuantity}>+</Button>
+                    </InputGroup>
+                    <div className='siparis-yan-kutu'>
+                        <Card className='tutar-ozet'>
+                            <CardBody>
+                                <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
+                                    <div className='secimler'>
+                                        <span>Seçimler</span>
+                                        <span>{ekstraTutar.toFixed(2)}₺</span>  
+                                    </div>
+                                    <div className='toplam'>
+                                        <strong>Toplam</strong>
+                                        <strong>{toplamTutar.toFixed(2)}₺</strong>
+                                    </div>
+                            </CardBody>
+                        </Card>   
+                        <Button color="warning" type="submit" block
                                     disabled={
                                         !boyut ||
                                         !hamur ||
                                         seciliMalzemeler.length < 4 ||
                                         seciliMalzemeler.length > 10
-                                    } className="mt-3">
+                                    } className="siparis-ver-btn desktop-only">
                                     Siparişi Ver
-                                </Button>    
-                        </CardBody>
-                    </Card>
+                        </Button>
+                        {/* Sadece mobilde görünen alt satır */}
+                        <div className="bottom-row mobile-only">
+                            <InputGroup className='quantity-group'>
+                                <Button onClick={decreaseQuantity}>–</Button>
+                                <Input
+                                type="number"
+                                value={quantity}
+                                readOnly
+                                style={{ textAlign: 'center' }}
+                                />
+                                <Button onClick={increaseQuantity}>+</Button>
+                            </InputGroup>
+                            <Button color="warning" type="submit" block
+                                    disabled={
+                                        !boyut ||
+                                        !hamur ||
+                                        seciliMalzemeler.length < 4 ||
+                                        seciliMalzemeler.length > 10
+                                    } className="siparis-ver-btn">
+                                    Siparişi Ver
+                            </Button>
+                        </div>   
+                    </div>  
                 </div>
             </Form>
         </div>
