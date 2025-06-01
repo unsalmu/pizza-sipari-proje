@@ -18,7 +18,7 @@
     font-size: 0.9rem;
     color: rgba(255,255,255,0.9);
     margin-top: 1rem;
-    padding-left: 680px;
+    padding-right: 300px;
     display: flex;
     align-items: center;  }
   
@@ -42,7 +42,6 @@
       overflow-x: hidden !important;
     }
     .site-breadcrumb {
-      padding-left: 100px;
       padding-bottom: 10px;
     }
     .site-logo {
